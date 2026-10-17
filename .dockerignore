@@ -1,19 +1,6 @@
-.*
-images
-README.md
-
-# mkdocs
-mkdocs.yml
-docs
+.git
+.github
+.venv
 site
-
-# pipenv
-Pipfile
-Pipfile.lock
-
-# amplify console
-amplify.yml
-
-# netlify
-netlify.toml
-runtime.txt
+**/__pycache__
+**/*.pyc

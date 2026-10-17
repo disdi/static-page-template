@@ -1,16 +1,16 @@
 services:
   mkdocs:
-    image: ghcr.io/peaceiris/mkdocs-material:v4.0.1
+    build: .
+    image: mkdocs-material-boilerplate
     container_name: mkdocs_material_boilerplate
     ports:
-      - 8000:8000
+      - "8000:8000"
     volumes:
-      - ${PWD}:/root
+      - .:/docs
+    working_dir: /docs
     stdin_open: true
     tty: true
     command:
-      - "mkdocs"
-      - "serve"
-      - "--dev-addr=0.0.0.0:8000"
-      - "--config-file"
-      - "./mkdocs-sample.yml"
+      - mkdocs
+      - serve
+      - --dev-addr=0.0.0.0:8000
