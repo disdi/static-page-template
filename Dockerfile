@@ -5,7 +5,7 @@ LABEL maintainer="peaceiris"
 WORKDIR /docs
 
 COPY requirements.txt .
-RUN python3 -m pip install --no-cache-dir --upgrade pip && \
+RUN python3 -m pip install --no-cache-dir "pip==26.2.1" && \
     python3 -m pip install --no-cache-dir -r requirements.txt && \
     python3 -m pip check
 
